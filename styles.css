@@ -1,0 +1,89 @@
+:root {
+    --bg: #0A0A23;
+    --box: #3B3B4F;
+    --textcolor: #fff;
+    --yelor: #FFCA2C;
+    --heading: "Roboto Mono", monospace;
+    --text: "Lato", sans-serif;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+  
+  body {
+    background-color: var(--bg);
+  }
+  
+  h1 {
+    color: var(--textcolor);
+    font-family: var(--heading);
+    font-size: 3rem;
+    padding: 20px;
+    background-color: var(--box);
+    text-align: center;
+    width: calc(100% - 100px);
+    margin: 40px auto;
+    border: 2px dashed;
+    border-radius: 5px;
+  }
+  
+  input, button{
+    font-family: var(--text);
+    font-size: 1.6rem;
+  }
+  
+  #text-box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 50px;
+  }
+  
+  #text-input {
+    border-radius: 5px;
+    width: 700px;
+    padding: 15px;
+    border: none;
+  }
+  
+  #check-btn {
+    background-color:var(--yelor);
+    font-weight: 700;
+    width: 130px;
+    padding: 15px;
+    border-radius: 5px;
+    margin-left: 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #result {
+    background-color: var(--textcolor);
+    width: fit-content;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+    border: 2px dashed var(--box);
+    margin-top: 10px;
+    padding: 20px;
+  }
+  
+  .palindrome, .not-palindrome {
+    font-weight: 700;
+    font-size: 1.8rem;
+    font-family: var(--text);
+  }
+  
+  .palindrome {
+    color: green;
+  
+  }
+  
+  .not-palindrome {
+    color: red;
+  }
