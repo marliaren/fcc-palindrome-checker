@@ -35,6 +35,7 @@
   input, button{
     font-family: var(--text);
     font-size: 1.8rem;
+    height: 60px;
   }
   
   #text-box {
@@ -51,11 +52,9 @@
     width: 700px;
     padding: 15px;
     border: none;
-    height: 60px;
   }
   
   #check-btn {
-    height: 60px;
     background-color:var(--yelor);
     font-weight: 700;
     width: 130px;
