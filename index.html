@@ -9,12 +9,21 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <h1>Palindrome Checker</h1>
-    <form id="text-box">
-      <input id="text-input" type="text" placeholder="Enter text you want to check." required></input>
-      <button id="check-btn" type="submit">Check</button>
-    </form>
-    <div id="result"></div>
+    <main class="container">
+      <h1>Palindrome Checker</h1>
+      <div class="palind-checker">
+      <form id="text-box">
+        <input id="text-input" type="text" placeholder="Enter text you want to check." required></input>
+        <button id="check-btn" type="submit">Check</button>
+        <button id="clear-btn" type="reset">Clear</button>
+      </form>
+      <div id="result"></div>
+    </div>
+
+    <div class="palindrome-fact">
+      <p class="palindrome-text">What is a <span class="bold">palindrome</span>? <br> A <span class="bold">palindrome</span> is a word, sentence, verse, or even number that reads the same backward or forward. In this case, the checker ignores punctuation, case, and spacing.</p>
+    </div>
+  </main>
 
     <script src="script.js"></script>
   </body>

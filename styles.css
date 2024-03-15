@@ -1,92 +1,209 @@
 :root {
-    --bg: #0A0A23;
-    --box: #3B3B4F;
-    --textcolor: #fff;
-    --yelor: #FFCA2C;
-    --heading: "Roboto Mono", monospace;
-    --text: "Lato", sans-serif;
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-size: 62.5%;
-  }
-  
-  body {
-    background-color: var(--bg);
-    padding: 0 60px;
-  }
-  
+  --bg: #0A0A23;
+  --box: #3B3B4F;
+  --textcolor: #fff;
+  --yelor: #FFCA2C;
+  --heading: "Roboto Mono", monospace;
+  --text: "Lato", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--bg);
+  padding: 0 50px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+h1 {
+  color: var(--textcolor);
+  font-family: var(--heading);
+  font-size: 4rem;
+  padding: 20px;
+  background-color: var(--box);
+  text-align: center;
+  /* width: min(100vw, 500px); */
+  width: calc(100% - 150px);
+  margin: 30px 0;
+  border: 2px dashed;
+  border-radius: 10px;
+}
+
+.palind-checker {
+  /* width: min(100vw, 500px); */
+  /* min-height: 100px; */
+  width: calc(100% - 150px);
+  background-color: var(--textcolor);
+  height: fit-content;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#text-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  margin-bottom: 10px;
+}
+
+input, button{
+  font-family: var(--text);
+  font-size: 2rem;
+  height: 60px;
+  border-radius: 10px;
+  border: none;
+  padding: 15px;
+}
+
+#text-input {
+  width: 100%;
+  border: none;
+  background-color: var(--box);
+  color: var(--textcolor);
+}
+
+button {
+  font-weight: 700;
+  /* width: 150px; */
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+#check-btn {
+  background-color:var(--yelor);
+}
+
+#clear-btn {
+  background-color: red;
+  color: var(--textcolor);
+}
+
+.palindrome-fact {
+  background-color: var(--yelor);
+  /* width: min(100vw, 500px); */
+  width: calc(100% - 150px);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+.palindrome-text {
+  color: black;
+  font-size: 1.6rem;
+  font-weight: 500;
+  font-family: var(--text);
+  text-align: justify;
+}
+
+.bold {
+  font-weight: 900;
+  font-size: 1.7rem;
+}
+
+.bold-res {
+  font-weight: 900;
+  font-size: 2.1rem;
+}
+
+#result {
+  /* background-color: var(--textcolor); */
+  width: fit-content;
+  height: fit-content;
+  display: block;
+  margin: 0 auto;
+  /* border-radius: 5px;
+  border: 2px dashed var(--box);
+  padding: 20px;*/
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+.palindrome, .not-palindrome {
+  font-weight: 500;
+  font-size: 2rem;
+  font-family: var(--text);
+  text-align: center;
+}
+
+.palindrome {
+  color: green;
+
+}
+
+.not-palindrome {
+  color: red;
+}
+
+@media only screen and (max-width: 650px) {
   h1 {
-    color: var(--textcolor);
-    font-family: var(--heading);
-    font-size: 4rem;
-    padding: 20px;
-    background-color: var(--box);
-    text-align: center;
-    width: calc(100% - 5px);
-    margin: 40px auto;
-    border: 2px dashed;
-    border-radius: 5px;
-  }
- 
-  #text-box {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px 0;
-    margin-bottom: 30px;
+    width: min(100vw, 500px);
+    font-size: 3.5rem;
   }
 
-  input, button{
-    font-family: var(--text);
-    font-size: 1.8rem;
-    height: 60px;
-    border-radius: 5px;
-    border: none;
-    padding: 15px;
+  .palind-checker {
+    width: min(100vw, 500px);
   }
-  
-  #text-input {
-    width: 700px;
-    border: none;
+
+  .palindrome-fact {
+    width: min(100vw, 500px);
   }
-  
-  #check-btn {
-    background-color:var(--yelor);
-    font-weight: 700;
-    width: 130px;
-    margin-left: 20px;
-    cursor: pointer;
+}
+
+@media only screen and (max-width: 550px) {
+  h1 {
+    width: min(100vw, 430px);
+    font-size: 3.5rem;
   }
-  
-  #result {
-    background-color: var(--textcolor);
-    width: fit-content;
-    height: fit-content;
-    display: block;
-    margin: 0 auto;
-    border-radius: 5px;
-    border: 2px dashed var(--box);
-    padding: 20px;
-    max-width: 100%;
-    word-wrap: break-word;
+
+  .palind-checker {
+    width: min(100vw, 430px);
   }
-  
-  .palindrome, .not-palindrome {
-    font-weight: 700;
-    font-size: 2rem;
-    font-family: var(--text);
+
+  .palindrome-fact {
+    width: min(100vw, 430px);
   }
-  
-  .palindrome {
-    color: green;
-  
+}
+
+@media only screen and (max-width: 500px) {
+  h1 {
+    width: min(100vw, 400px);
+    font-size: 3.5rem;
   }
-  
-  .not-palindrome {
-    color: red;
+
+  .palind-checker {
+    width: min(100vw, 400px);
   }
+
+  .palindrome-fact {
+    width: min(100vw, 400px);
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  h1 {
+    width: min(100vw, 320px);
+  }
+
+  .palind-checker {
+    width: min(100vw, 320px);
+  }
+
+  .palindrome-fact {
+    width: min(100vw, 320px);
+  }
+}

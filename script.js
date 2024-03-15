@@ -1,10 +1,15 @@
 const textInput = document.getElementById('text-input');
 const checkBtn = document.getElementById('check-btn');
+const clearBtn = document.getElementById('clear-btn');
 const palindromeChecker = document.getElementById('palindrome-checker');
 const result = document.getElementById('result');
 
 // default to none first. result will only appear when check button is clicked
 result.style.display = 'none';
+
+function clearTxt() {
+  result.innerHTML = '';
+}
 
 function checkPalindrome(event) {
   event.preventDefault();
@@ -14,7 +19,7 @@ function checkPalindrome(event) {
   const reversedStr = str.split('').reverse().join(''); // reverse the string
 
   if (str === reversedStr && str !== null && str !== '') { //check the orig. string and the reversed. it should strictly match
-    result.innerHTML = `<span class="palindrome">${textInput.value} is a palindrome.</span>`;
+    result.innerHTML = `<span class="palindrome"><span class="bold-res">${textInput.value}</span> is a palindrome.</span>`;
     result.style.display = 'block'; //show the result div
   } 
 
@@ -23,7 +28,7 @@ function checkPalindrome(event) {
   }
   
   else {
-    result.innerHTML = `<span class="not-palindrome">${textInput.value} is not a palindrome.</span>`;
+    result.innerHTML = `<span class="not-palindrome"><span class="bold-res">${textInput.value}</span> is not a palindrome.</span>`;
      result.style.display = 'block'; //show the result div
   }
 
@@ -31,5 +36,4 @@ function checkPalindrome(event) {
 }
 
 checkBtn.addEventListener("click", checkPalindrome);
-
-
+clearBtn.addEventListener("click", clearTxt);
